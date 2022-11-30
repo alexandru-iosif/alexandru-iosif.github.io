@@ -1,5 +1,6 @@
 --Macaulay2: Alegebra and Algebraic Geometry
 --Undergraduate Students Seminar
+--Day 4
 --∃ n, P(n) ∈ Science
 --3rd Session
 --SLU MADRID
@@ -8,6 +9,7 @@
 --(Alexandru Iosif)
 
 --Consider the field with 7
+
 F7 = GF (7)
 netList table(
     {0,1,2,3,4,5,6},
@@ -22,17 +24,26 @@ netList table(
     )
 
 restart
+
 --Consider the field with 9 elements:
+
 F = GF(3^2,Variable=>a)
+
 --Polynomial defining F:
+
 ambient F
+
 --We check that the polynomial a^2-a-1=0 in F.
+
 a^2-a-1
+
 --Addition and multiplication tables of F_4:
+
 netList table(
     {0,1,2,a,a+1,a+2,2*a,2*a+1,2*a+2},
     {0,1,2,a,a+1,a+2,2*a,2*a+1,2*a+2},
     (i,j) -> promote(i+j, F))
+
 netList table({0,1,2,a,a+1,a+2,2*a,2*a+1,2*a+2},
     {0,1,2,a,a+1,a+2,2*a,2*a+1,2*a+2},
     (i,j) -> promote(i*j, F))
@@ -42,23 +53,33 @@ restart
 --Consider the linear code with n=4, k=2 given by the
 --generator matrix.
 --That is, C is a function F^2_2 ---> F^4_2
+
 F2 = GF(2,Variable=>a)
+
 G=matrix{{1,1,1,1},{1,0,1,0}}
+
 --a. Show that since we have only the two scalars 0,1
 --in F2 to use making kinear combinations,
 --there are exactly four elements of C:
+
 C=flatten table({G},
     {matrix{{0,0}},
 	matrix{{0,1}},
 	matrix{{1,0}},
 	matrix{{1,1}}},
     (i,j)->promote(j*i,F2))
+
 --b. Show that
+
 H=matrix{{1,1},{1,0},{1,1},{1,0}}
+
 --is a parity check matrix for C by verifying that
 --xH = 0 for all x in C
+
 table(C,{H},(i,j)->promote(i*j,F2))
+
 promote(G*H,F2)
+
 --Do you remember what is a parity check matrix?
 
 restart
@@ -77,6 +98,8 @@ HammingDistance = (x,y,F) ->(
 	);
     print n
     )
+
+--Examples
 
 F=GF(2)
 N=matrix{{0,1}}
