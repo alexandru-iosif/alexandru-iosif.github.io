@@ -42,9 +42,6 @@
 
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="4">
 		  
-		  <a href="https://alexandru-iosif.github.io/cv.pdf",
-			target="_blank"><font size="4"><b>CV</b></font></font></a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="https://bitbucket.org/alexandru-iosif/workspace/repositories"
 		   target="_blank"><font size="4"><b>Code</b></font></a>
 		&nbsp;&nbsp;<br/><br/>
@@ -134,9 +131,19 @@
 		   
 		      
 	       <br/>
-	      
+
+
+	       <div id="current_date">
+		 <script>
+		   const options = {year: 'numeric', month: 'long', day: 'numeric' };
+		   document.getElementById("current_date").innerHTML = "<b>Last modified:</b>  " + new Date().toLocaleDateString('en-UK', options);
+		 </script>
+	       </div>
+	       
 </td></td></tbody></table>
 </div>
+
+
 
      
 </body>
