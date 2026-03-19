@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexandru Iosif">
+    <meta name="robots" content="all">
+    <title>Alexandru Iosif - Home, Research, Talks & Teaching</title>
+    <style>
+        /* Modernized Retro Academic / Workstation Style */
+        :root {
+            /* Definining the palette for comfort & oldish feel */
+            --bg-sky: #e0f2fe;        /* Modern Light Blue Sky tint */
+            --text-main: #111827;     /* Soft Black for better reading */
+            --text-muted: #4b5563;    /* Gentle Grey for labels */
+            --link-primary: #1d4ed8;  /* Classic Blue Link, slightly refined */
+            --link-visited: #7e22ce;  /* classic Purple Visited Link, slightly refined */
+            --link-hover-bg: #fef9c3; /* Classic Yellow Highlight on hover */
+            --academic-accent: #a52a2a; /* Brown-Red accent for classic touch */
+        }
+
+        /* --- Global Resets & Layout --- */
+        html { scroll-behavior: smooth; } /* A modern touch for long academic pages */
+        
+        body {
+            background-color: var(--bg-sky); /* The Bluish Sky tint! */
+            font-family: "Times New Roman", Times, serif; /* Pure academic serif for prose */
+            color: var(--text-main);
+            margin: 0;
+            padding: 30px; /* More padding around the main container */
+            line-height: 1.5; /* INCREASED LINE-HEIGHT: CRITICAL FOR READABILITY */
+        }
+
+        .container {
+            max-width: 960px; /* Slightly wider for modern screens while keeping classic proportions */
+            margin: 0 auto;
+            background-color: #ffffff; /* Clean white card */
+            padding: 40px; /* INCREASED PADDING: GIVES CONTENT ROOM TO BREATHE */
+            
+            /* Class old-school border and slight shadow */
+            border: 1px solid #c7d2fe; /* Softened blue border */
+            box-shadow: 4px 4px 0px rgba(199, 210, 254, 0.5); /* Softened blue shadow */
+        }
+
+        /* --- Navigation - Clean & Structured --- */
+        nav {
+            margin-bottom: 50px; /* Give it space */
+            padding: 15px;
+            background-color: #f8fafc; /* Very light cool grey */
+            border: 1px solid #e2e8f0;
+            text-align: center; /* Centered nav is very "homepage" */
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #000; /* Links inside nav are often black in old designs */
+            font-weight: bold;
+            margin: 0 15px; /* Spacing between links */
+            
+            /* Use Monospace (Courier New) for technical data/buttons */
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95rem;
+            text-transform: lowercase; /* Classic 'lowercase' style */
+            padding: 2px 5px; /* Small click target highlight */
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+            background-color: var(--link-hover-bg); /* Yellow highlight is key retro touch */
+            color: var(--link-primary); /* Turn blue on hover */
+        }
+
+        /* --- Sections and Content --- */
+        section { 
+            margin-bottom: 50px; /* More space between academic domains */
+            border-top: 1px solid #d1d5db; /* A rule between major topics */
+            padding-top: 20px;
+        }
+        
+        /* Typography: Mix of Serif Prose and Monospace Tech */
+        h1 { 
+            font-family: "Courier New", Courier, monospace; 
+            font-size: 2rem; 
+            color: var(--text-main); /* Black title, not inverted, for readability */
+            padding: 0;
+            margin-top: 0;
+            letter-spacing: -1px; /* Slight classic text compression */
+        }
+
+        h2 { 
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.4rem;
+            color: var(--text-muted); /* HEADERS ARE MUTED, ALLOWING PROSE TO POP */
+            border-bottom: 2px solid #e5e7eb; /* Subtle dividing line */
+            margin-top: 40px;
+            padding-bottom: 5px;
+        }
+
+        h3 { 
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px; /* consistent vertical spacing */
+        }
+
+        /* Profile Layout */
+        .profile-flex { display: flex; gap: 40px; align-items: flex-start; }
+        .profile-text { flex: 1; }
+        .profile-img {
+            width: 190px;
+            border: 2px solid #cbd5e1; /* defined, but softer grey border */
+            border-radius: 4px; /* classic workstation slight radius */
+            padding: 4px;
+            background: #fff;
+        }
+
+        /* Lists and Links */
+        ul { padding-left: 30px; list-style-type: square; } /* Use square bullets for retro feel */
+        li { 
+            margin-bottom: 12px; /* INCREASED SPACING BETWEEN LIST ITEMS */
+            color: #222; /* Slightly defined list text */
+        }
+        
+        /* The signature Blue/Purple Links, optimized for screen comfort */
+        a { color: var(--link-primary); text-decoration: underline; }
+        a:visited { color: var(--link-visited); }
+        a:hover { color: #dc2626; /* Turn red on hover - classic Unix style */ }
+
+        /* External Bar - Monospace Tags as academic keywords */
+        .external-bar { margin: 20px 0; }
+        .external-bar a {
+            font-family: "Courier New", Courier, monospace;
+            background: #f1f5f9; /* Light blue-grey background */
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 4px 10px; /* BETTER CLICK TARGET */
+            text-decoration: none;
+            margin-right: 8px; /* space between tags */
+            font-size: 0.85rem;
+            border-radius: 4px;
+        }
+        .external-bar a:hover { 
+            background: #0f172a; /* Invert on hover - clean, professional effect */
+            color: #fff; 
+            border-color: #0f172a;
+        }
+        
+        /* Specific technical elements, like teaching terms and video tags */
+        .term-header { 
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold; 
+            display: block; 
+            margin-top: 25px;
+            color: var(--academic-accent); /* Classic Maroon accent */
+        }
+        
+        .video-tag { 
+            font-family: "Courier New", Courier, monospace;
+            background: #000; 
+            color: #fff; 
+            padding: 1px 4px; 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            border-radius: 2px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .profile-flex { flex-direction: column-reverse; gap: 20px; text-align: center; align-items: center; }
+            .container { padding: 20px; margin: 0; border: none; box-shadow: none; border-radius: 0; }
+            nav a { margin: 5px; font-size: 0.9rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="#home">[home]</a>
+        <a href="#research">[research]</a>
+        <a href="#talks">[talks]</a>
+        <a href="#teaching">[teaching]</a>
+        <a href="https://alexandruvasilicaiosif.wordpress.com/" target="_blank">[ποίησις]</a>
+    </nav>
+
+    <section id="home">
+        <div class="profile-flex">
+            <div class="profile-text">
+                <h1>Alexandru Iosif</h1>
+                <p>I am an Assistant Professor (Profesor Ayudante Doctor) of Mathematics at 
+                    <a href="https://servicios.urjc.es/pdi/ver/alexandru.iosif" target="_blank">Rey Juan Carlos University</a>.
+                </p>
+                <p><b>Address:</b> Room 026, Departamental II, Campus de Móstoles.</p>
+                <p><b>E-Mail:</b> alexandru [dot] iosif [at] urjc [dot] es</p>
+            </div>
+            <img src="iosif.jpg" alt="Alexandru Iosif" class="profile-img">
+        </div>
+    </section>
+
+    <section id="research">
+        <h1>Research</h1>
+        <div class="external-bar">
+            <a href="https://scholar.google.com/citations?user=N8W4cLwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-6361-4331" target="_blank">ORCID</a>
+            <a href="https://bitbucket.org/alexandru-iosif/workspace/repositories/" target="_blank">Source Code</a>
+            <a href="https://cvn.fecyt.es/0000-0001-6361-4331" target="_blank">CVN</a>
+        </div>
+
+        <h3>Research Interests</h3>
+        <ul>
+            <li><strong>Applied and Computational Algebra:</strong> Applications of commutative algebra, algebraic geometry, semialgebraic geometry, and their combinatorics to polynomial ODE systems. Computation and topology of discriminants of semialgebraic systems and in positive toric varieties. Algebraic transformations of polynomial ODE systems and their formal algebraic invariants.</li>
+            <li><strong>Mathematics Education:</strong> Interaction between capitalism and mathematics education, especially in the period following the introduction of modern mathematics in primary and secondary curricula. Mathematical formation of teachers.</li>
+        </ul>
+
+        <h2>Research Articles</h2>
+        <h3>0. Submitted Articles / Articles in Preparation</h3>
+        <ul>
+            <li>A. Iosif, <i>Duality in mass-action networks</i> (2026). Submitted. <a href="https://arxiv.org/abs/2603.08767" target="_blank">arXiv link</a>.</li>
+            <li>A. Iosif, <i>Matemáticas modernas y capitalización del conocimiento matemático en la Educación General Básica Española</i> (2025). Submitted.</li>
+            <li><i>Discriminants à la Sturm for families of affine sections of positive toric varieties.</i> In Preparation.</li>
+        </ul>
+
+        <h3>A. Applied and Computational Algebra</h3>
+        <ul>
+            <li>A. Desoeuvres, A. Iosif, C. Lüders, O. Radulescu, H. Rahkooy, M. Seiß, T. Sturm. <i>A Computational Approach to Polynomial Conservation Laws</i> (2024). <a href="https://epubs.siam.org/doi/abs/10.1137/22M1544014" target="_blank">SIAM J. Appl. Dyn. Syst. 23(1)</a>. <a href="https://arxiv.org/abs/2212.14881" target="_blank">arXiv link</a>.</li>
+            <li>A. Desoeuvres, et al. <i>Reduction of Chemical Reaction Networks with Approximate Conservation Laws</i> (2024). <a href="https://epubs.siam.org/doi/abs/10.1137/22M1543963" target="_blank">SIAM J. Appl. Dyn. Syst. 23(1)</a>. <a href="https://arxiv.org/abs/2212.13474" target="_blank">arXiv link</a>.</li>
+            <li>D. Grigoriev, et al. <i>Efficiently and Effectively Recognizing Toricity of Steady State Varieties</i> (2020). <a href="https://link.springer.com/article/10.1007/s11786-020-00479-9" target="_blank">Math. Comput. Sci. 15</a>. <a href="https://arxiv.org/abs/1910.04100" target="_blank">arXiv link</a>.</li>
+            <li>C. Conradi, et al. <i>Multistationarity in the space of total concentrations for systems that admit a monomial parametrization</i> (2019). <a href="https://link.springer.com/article/10.1007/s11538-019-00639-4" target="_blank">Bull. Math. Biol. 81(10)</a>. <a href="https://arxiv.org/abs/1810.08152" target="_blank">arXiv link</a>.</li>
+            <li>A. Iosif. <i>Algebraic Methods for detecting multistationarity in mass-action networks</i> (2019). PhD Thesis, Otto-von-Guericke-Universität Magdeburg. <a href="https://opendata.uni-halle.de/bitstream/1981185920/14078/1/Iosif_Alexandru_Dissertation_2019.pdf" target="_blank">PDF Link</a>.</li>
+        </ul>
+
+        <h3>B. Mathematics Education</h3>
+        <ul>
+            <li>A. Nolla, et al. <i>Elementary mathematics teacher education programs in Greece, Romania, and Spain</i> (2024). <a href="https://www.iejme.com/article/elementary-mathematics-teacher-education-programs-in-greece-romania-and-spain-15041" target="_blank">IEJME 19(4)</a>.</li>
+            <li>A. Iosif. <i>Elementos de la teoría de conjuntos en la educación secundaria española... una perspectiva filosófica y socio–crítica</i> (2021). TFM MESOB, UAM.</li>
+        </ul>
+
+        <h2>Other Projects & Documents</h2>
+        <ul>
+            <li><a href="https://hal.science/hal-02453356/document" target="_blank">The scalar orbit of the virtual Kähler-Ricci flow</a>.</li>
+            <li><a href="https://hal.science/hal-03064378v1/document" target="_blank">Attractors of toric MESSI Systems with no Swap</a>.</li>
+            <li><a href="https://hal.science/hal-02296867v1/document" target="_blank">A few aspects of mass-action sheaves</a>.</li>
+            <li><a href="https://arxiv.org/pdf/1912.06896.pdf" target="_blank">Analysis of the Conradi-Kahle algorithm for detecting binomiality on biological models</a>.</li>
+            <li><a href="https://bitbucket.org/alexandru-iosif/maplesturmdiscriminants/src/master/" target="_blank">Maple Discriminant Variety Code</a>.</li>
+        </ul>
+    </section>
+
+    <section id="talks">
+        <h1>Talks & Posters</h1>
+        <p>This is a non-exhaustive list of my talks and posters.</p>
+        <ul>
+            <li><a href="Talks/Tenerife2026.pdf" target="_blank"><i>Discriminants à la Sturm for families of affine sections of positive toric varieties.</i></a> IV Minisimposio Iberoamericano de Álgebra, Tenerife, Jan 30, 2026.</li>
+            <li><i>How toric is Systems Biology?</i> Universidad Complutense de Madrid, June 18, 2025.</li>
+            <li><a href="Talks/Tenerife2024.pdf" target="_blank"><i>El problema de la multiestacionariedad en sistemas dinámicos con estados estacionarios tóricos.</i></a> Universidad de La Laguna, Nov 19, 2024.</li>
+            <li><a href="Talks/Talk_Future_Algorithms.pdf" target="_blank"><i>Euclid, Descartes, Sturm et al. In search of the real roots of polynomials.</i></a> Future Algorithms 2024, Online, July 11, 2024. <a href="https://www.youtube.com/watch?v=TwnZciIQVb0" target="_blank"><span class="video-tag">VIDEO</span></a></li>
+            <li><a href="Talks/Pamplona2024.pdf" target="_blank"><i>Duality in mass-action networks: A step closer to a new case of the Global Attractor Conjecture?</i></a> Congreso RSME 2024, Pamplona, Jan 26, 2024.</li>
+            <li><a href="Talks/Warsaw2023.pdf" target="_blank"><i>Duality in mass-action networks.</i></a> ACA 2023, Warsaw, Poland, July 18, 2023.</li>
+            <li><a href="Talks/SeminarioURJC2023.pdf" target="_blank"><i>The multistationarity problem in dynamical systems with toric steady states.</i></a> Seminario Matemática Aplicada URJC, March 28, 2023.</li>
+            <li><a href="Talks/dia_pi_2023.pdf" target="_blank"><i>Geometría Algebraica et Ciencia: ¿demasiado álgebra o hacia un nuevo paradigma teórico-computacional?</i></a> Día Pi, URJC, March 14, 2023.</li>
+            <li><a href="Talks/SeminarioUAM_Didactica_2022.pdf" target="_blank"><i>Euclides, Descartes y Sturm: la búsqueda de las raíces reales de un polinomio... ¿en el aula de Secundaria?</i></a> Seminario Didáctica, UAM, July 15, 2022.</li>
+            <li><a href="Talks/zaragoza2022.pdf" target="_blank"><i>Using the Tarski-Seidenberg Algorithm to compute the discriminant of a linear section of a positive toric variety.</i></a> Jíbiri Seminar IV, Zaragoza, June 2022.</li>
+            <li><a href="Talks/ParisFeb2020.pdf" target="_blank"><i>Toric biochemical systems.</i></a> INRIA Saclay, Paris, Feb 24, 2020.</li>
+            <li><a href="Talks/SIAM2019.pdf" target="_blank"><i>Multistationarity in the space of total concentrations...</i></a> (Poster). SIAM AG, Bern, July 2019.</li>
+            <li><a href="Talks/mathcore_poster.pdf" target="_blank"><i>Algebraic Methods for the Study of Multistationarity in Mass-Action Networks.</i></a> (PhD Poster). University of Magdeburg, 2019.</li>
+        </ul>
+
+        <h2>Seminars</h2>
+        <ul>
+            <li>Undergraduate Students Seminar: <a href="exists_n_P.html" target="_blank">∃ n, P(n) ∈ Science</a> (Saint Louis University - Madrid, 2022).</li>
+        </ul>
+    </section>
+
+    <section id="teaching">
+        <h1>Teaching</h1>
+        <h2>Universidad Rey Juan Carlos, Madrid</h2>
+
+        <span class="term-header">Spring 2026</span>
+        <ul>
+            <li>Ampliación de Matemática Aplicada (Grado en Robótica Software)</li>
+            <li>Matemáticas II (Grado en Fundamentos de Arquitectura)</li>
+        </ul>
+
+        <span class="term-header">Fall 2025</span>
+        <ul>
+            <li>Matemáticas I (Grado en Ingeniería en Tecnologías de Telecomunicación)</li>
+        </ul>
+
+        <span class="term-header">Spring 2025</span>
+        <ul>
+            <li>Ampliación de Matemática Aplicada (Grado en Robótica Software)</li>
+            <li>Matemáticas II (Grado en Fundamentos de Arquitectura)</li>
+        </ul>
+
+        <span class="term-header">Fall 2024</span>
+        <ul>
+            <li>Lógica (Grado en Matemáticas)</li>
+        </ul>
+
+        <span class="term-header">Spring 2024</span>
+        <ul>
+            <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
+            <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
+        </ul>
+
+        <span class="term-header">Fall 2023</span>
+        <ul>
+            <li>Matemáticas I (Grado en Ingeniería de Organización Industrial)</li>
+            <li>Matemática Discreta y Álgebra (Grado en Ingeniería Informática)</li>
+        </ul>
+
+        <span class="term-header">Spring 2023</span>
+        <ul>
+            <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
+            <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
+        </ul>
+
+        <h2>Saint Louis University – Madrid Campus</h2>
+
+        <span class="term-header">Fall 2022</span>
+        <ul>
+            <li>Calculus I</li>
+            <li>Pre-Calculus</li>
+            <li>Principles of Mathematics</li>
+        </ul>
+
+        <span class="term-header">Spring 2022</span>
+        <ul>
+            <li>Calculus I</li>
+            <li>College Algebra (2 groups)</li>
+            <li>Advanced Mathematics for Engineers</li>
+        </ul>
+
+        <span class="term-header">Fall 2021</span>
+        <ul>
+            <li>Calculus I</li>
+            <li>Advanced Mathematics for Engineers</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
