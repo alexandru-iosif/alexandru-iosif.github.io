@@ -9,89 +9,80 @@
     <style>
         /* Modernized Retro Academic / Workstation Style */
         :root {
-            /* Definining the palette for comfort & oldish feel */
-            --bg-sky: #e0f2fe;        /* Modern Light Blue Sky tint */
-            --text-main: #111827;     /* Soft Black for better reading */
-            --text-muted: #4b5563;    /* Gentle Grey for labels */
-            --link-primary: #1d4ed8;  /* Classic Blue Link, slightly refined */
-            --link-visited: #7e22ce;  /* classic Purple Visited Link, slightly refined */
-            --link-hover-bg: #fef9c3; /* Classic Yellow Highlight on hover */
-            --academic-accent: #a52a2a; /* Brown-Red accent for classic touch */
+            --bg-sky: #e0f2fe;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --link-primary: #1d4ed8;
+            --link-visited: #7e22ce;
+            --link-hover-bg: #fef9c3;
+            --academic-accent: #a52a2a;
         }
 
-        /* --- Global Resets & Layout --- */
-        html { scroll-behavior: smooth; } /* A modern touch for long academic pages */
+        html { scroll-behavior: smooth; }
         
         body {
-            background-color: var(--bg-sky); /* The Bluish Sky tint! */
-            font-family: "Times New Roman", Times, serif; /* Pure academic serif for prose */
+            background-color: var(--bg-sky);
+            font-family: "Times New Roman", Times, serif;
             color: var(--text-main);
             margin: 0;
-            padding: 30px; /* More padding around the main container */
-            line-height: 1.5; /* INCREASED LINE-HEIGHT: CRITICAL FOR READABILITY */
+            padding: 30px;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 960px; /* Slightly wider for modern screens while keeping classic proportions */
+            max-width: 960px;
             margin: 0 auto;
-            background-color: #ffffff; /* Clean white card */
-            padding: 40px; /* INCREASED PADDING: GIVES CONTENT ROOM TO BREATHE */
-            
-            /* Class old-school border and slight shadow */
-            border: 1px solid #c7d2fe; /* Softened blue border */
-            box-shadow: 4px 4px 0px rgba(199, 210, 254, 0.5); /* Softened blue shadow */
+            background-color: #ffffff;
+            padding: 40px;
+            border: 1px solid #c7d2fe;
+            box-shadow: 4px 4px 0px rgba(199, 210, 254, 0.5);
         }
 
-        /* --- Navigation - Clean & Structured --- */
         nav {
-            margin-bottom: 50px; /* Give it space */
+            margin-bottom: 50px;
             padding: 15px;
-            background-color: #f8fafc; /* Very light cool grey */
+            background-color: #f8fafc;
             border: 1px solid #e2e8f0;
-            text-align: center; /* Centered nav is very "homepage" */
+            text-align: center;
         }
         
         nav a {
             text-decoration: none;
-            color: #000; /* Links inside nav are often black in old designs */
+            color: #000;
             font-weight: bold;
-            margin: 0 15px; /* Spacing between links */
-            
-            /* Use Monospace (Courier New) for technical data/buttons */
+            margin: 0 15px;
             font-family: "Courier New", Courier, monospace;
             font-size: 0.95rem;
-            text-transform: lowercase; /* Classic 'lowercase' style */
-            padding: 2px 5px; /* Small click target highlight */
+            text-transform: lowercase;
+            padding: 2px 5px;
         }
         
         nav a:hover {
             text-decoration: underline;
-            background-color: var(--link-hover-bg); /* Yellow highlight is key retro touch */
-            color: var(--link-primary); /* Turn blue on hover */
+            background-color: var(--link-hover-bg);
+            color: var(--link-primary);
         }
 
-        /* --- Sections and Content --- */
         section { 
-            margin-bottom: 50px; /* More space between academic domains */
-            border-top: 1px solid #d1d5db; /* A rule between major topics */
+            margin-bottom: 50px;
+            border-top: 1px solid #d1d5db;
             padding-top: 20px;
         }
         
-        /* Typography: Mix of Serif Prose and Monospace Tech */
         h1 { 
             font-family: "Courier New", Courier, monospace; 
             font-size: 2rem; 
-            color: var(--text-main); /* Black title, not inverted, for readability */
+            color: var(--text-main);
             padding: 0;
             margin-top: 0;
-            letter-spacing: -1px; /* Slight classic text compression */
+            letter-spacing: -1px;
         }
 
         h2 { 
             font-family: "Courier New", Courier, monospace;
             font-size: 1.4rem;
-            color: var(--text-muted); /* HEADERS ARE MUTED, ALLOWING PROSE TO POP */
-            border-bottom: 2px solid #e5e7eb; /* Subtle dividing line */
+            color: var(--text-muted);
+            border-bottom: 2px solid #e5e7eb;
             margin-top: 40px;
             padding-bottom: 5px;
         }
@@ -104,59 +95,47 @@
             color: #333;
         }
 
-        p {
-            margin-bottom: 15px; /* consistent vertical spacing */
-        }
-
-        /* Profile Layout */
         .profile-flex { display: flex; gap: 40px; align-items: flex-start; }
         .profile-text { flex: 1; }
         .profile-img {
             width: 190px;
-            border: 2px solid #cbd5e1; /* defined, but softer grey border */
-            border-radius: 4px; /* classic workstation slight radius */
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
             padding: 4px;
             background: #fff;
         }
 
-        /* Lists and Links */
-        ul { padding-left: 30px; list-style-type: square; } /* Use square bullets for retro feel */
-        li { 
-            margin-bottom: 12px; /* INCREASED SPACING BETWEEN LIST ITEMS */
-            color: #222; /* Slightly defined list text */
-        }
+        ul { padding-left: 30px; list-style-type: square; }
+        li { margin-bottom: 12px; color: #222; }
         
-        /* The signature Blue/Purple Links, optimized for screen comfort */
         a { color: var(--link-primary); text-decoration: underline; }
         a:visited { color: var(--link-visited); }
-        a:hover { color: #dc2626; /* Turn red on hover - classic Unix style */ }
+        a:hover { color: #dc2626; }
 
-        /* External Bar - Monospace Tags as academic keywords */
         .external-bar { margin: 20px 0; }
         .external-bar a {
             font-family: "Courier New", Courier, monospace;
-            background: #f1f5f9; /* Light blue-grey background */
+            background: #f1f5f9;
             color: #0f172a;
             border: 1px solid #cbd5e1;
-            padding: 4px 10px; /* BETTER CLICK TARGET */
+            padding: 4px 10px;
             text-decoration: none;
-            margin-right: 8px; /* space between tags */
+            margin-right: 8px;
             font-size: 0.85rem;
             border-radius: 4px;
         }
         .external-bar a:hover { 
-            background: #0f172a; /* Invert on hover - clean, professional effect */
+            background: #0f172a;
             color: #fff; 
             border-color: #0f172a;
         }
         
-        /* Specific technical elements, like teaching terms and video tags */
         .term-header { 
             font-family: "Courier New", Courier, monospace;
             font-weight: bold; 
             display: block; 
             margin-top: 25px;
-            color: var(--academic-accent); /* Classic Maroon accent */
+            color: var(--academic-accent);
         }
         
         .video-tag { 
@@ -169,7 +148,26 @@
             border-radius: 2px;
         }
 
-        /* --- Responsive Design --- */
+        details.teaching-details {
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        summary {
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--link-primary);
+            outline: none;
+        }
+        
+        summary:hover {
+            text-decoration: underline;
+            background-color: var(--link-hover-bg);
+        }
+
         @media (max-width: 768px) {
             .profile-flex { flex-direction: column-reverse; gap: 20px; text-align: center; align-items: center; }
             .container { padding: 20px; margin: 0; border: none; box-shadow: none; border-radius: 0; }
@@ -229,7 +227,7 @@
         <h3>A. Applied and Computational Algebra</h3>
         <ul>
             <li>A. Desoeuvres, A. Iosif, C. Lüders, O. Radulescu, H. Rahkooy, M. Seiß, T. Sturm. <i>A Computational Approach to Polynomial Conservation Laws</i> (2024). <a href="https://epubs.siam.org/doi/abs/10.1137/22M1544014" target="_blank">SIAM J. Appl. Dyn. Syst. 23(1)</a>. <a href="https://arxiv.org/abs/2212.14881" target="_blank">arXiv link</a>.</li>
-            <li>A. Desoeuvres, et al. <i>Reduction of Chemical Reaction Networks with Approximate Conservation Laws</i> (2024). <a href="https://epubs.siam.org/doi/abs/10.1137/22M1543963" target="_blank">SIAM J. Appl. Dyn. Syst. 23(1)</a>. <a href="https://arxiv.org/abs/2212.13474" target="_blank">arXiv link</a>.</li>
+            <li>A. Desoeuvres, A. Iosif, C. Lüders, O. Radulescu, H. Rahkooy, M. Seiß, T. Sturm. <i>Reduction of Chemical Reaction Networks with Approximate Conservation Laws</i> (2024). <a href="https://epubs.siam.org/doi/abs/10.1137/22M1543963" target="_blank">SIAM J. Appl. Dyn. Syst. 23(1)</a>. <a href="https://arxiv.org/abs/2212.13474" target="_blank">arXiv link</a>.</li>
             <li>D. Grigoriev, et al. <i>Efficiently and Effectively Recognizing Toricity of Steady State Varieties</i> (2020). <a href="https://link.springer.com/article/10.1007/s11786-020-00479-9" target="_blank">Math. Comput. Sci. 15</a>. <a href="https://arxiv.org/abs/1910.04100" target="_blank">arXiv link</a>.</li>
             <li>C. Conradi, et al. <i>Multistationarity in the space of total concentrations for systems that admit a monomial parametrization</i> (2019). <a href="https://link.springer.com/article/10.1007/s11538-019-00639-4" target="_blank">Bull. Math. Biol. 81(10)</a>. <a href="https://arxiv.org/abs/1810.08152" target="_blank">arXiv link</a>.</li>
             <li>A. Iosif. <i>Algebraic Methods for detecting multistationarity in mass-action networks</i> (2019). PhD Thesis, Otto-von-Guericke-Universität Magdeburg. <a href="https://opendata.uni-halle.de/bitstream/1981185920/14078/1/Iosif_Alexandru_Dissertation_2019.pdf" target="_blank">PDF Link</a>.</li>
@@ -269,15 +267,11 @@
             <li><a href="Talks/SIAM2019.pdf" target="_blank"><i>Multistationarity in the space of total concentrations...</i></a> (Poster). SIAM AG, Bern, July 2019.</li>
             <li><a href="Talks/mathcore_poster.pdf" target="_blank"><i>Algebraic Methods for the Study of Multistationarity in Mass-Action Networks.</i></a> (PhD Poster). University of Magdeburg, 2019.</li>
         </ul>
-
-        <h2>Seminars</h2>
-        <ul>
-            <li>Undergraduate Students Seminar: <a href="exists_n_P.html" target="_blank">∃ n, P(n) ∈ Science</a> (Saint Louis University - Madrid, 2022).</li>
-        </ul>
     </section>
 
     <section id="teaching">
         <h1>Teaching</h1>
+        
         <h2>Universidad Rey Juan Carlos, Madrid</h2>
 
         <span class="term-header">Spring 2026</span>
@@ -286,61 +280,81 @@
             <li>Matemáticas II (Grado en Fundamentos de Arquitectura)</li>
         </ul>
 
-        <span class="term-header">Fall 2025</span>
-        <ul>
-            <li>Matemáticas I (Grado en Ingeniería en Tecnologías de Telecomunicación)</li>
-        </ul>
+        <details class="teaching-details">
+            <summary>[Show previous terms at URJC (2023-2025)]</summary>
+            
+            <span class="term-header">Fall 2025</span>
+            <ul><li>Matemáticas I (Grado en Ingeniería en Tecnologías de Telecomunicación)</li></ul>
 
-        <span class="term-header">Spring 2025</span>
-        <ul>
-            <li>Ampliación de Matemática Aplicada (Grado en Robótica Software)</li>
-            <li>Matemáticas II (Grado en Fundamentos de Arquitectura)</li>
-        </ul>
+            <span class="term-header">Spring 2025</span>
+            <ul>
+                <li>Ampliación de Matemática Aplicada (Grado en Robótica Software)</li>
+                <li>Matemáticas II (Grado en Fundamentos de Arquitectura)</li>
+            </ul>
 
-        <span class="term-header">Fall 2024</span>
-        <ul>
-            <li>Lógica (Grado en Matemáticas)</li>
-        </ul>
+            <span class="term-header">Fall 2024</span>
+            <ul><li>Lógica (Grado en Matemáticas)</li></ul>
 
-        <span class="term-header">Spring 2024</span>
-        <ul>
-            <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
-            <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
-        </ul>
+            <span class="term-header">Spring 2024</span>
+            <ul>
+                <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
+                <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
+            </ul>
 
-        <span class="term-header">Fall 2023</span>
-        <ul>
-            <li>Matemáticas I (Grado en Ingeniería de Organización Industrial)</li>
-            <li>Matemática Discreta y Álgebra (Grado en Ingeniería Informática)</li>
-        </ul>
+            <span class="term-header">Fall 2023</span>
+            <ul>
+                <li>Matemáticas I (Grado en Ingeniería de Organización Industrial)</li>
+                <li>Matemática Discreta y Álgebra (Grado en Ingeniería Informática)</li>
+            </ul>
 
-        <span class="term-header">Spring 2023</span>
-        <ul>
-            <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
-            <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
-        </ul>
+            <span class="term-header">Spring 2023</span>
+            <ul>
+                <li>Matemáticas II (Grado en Ingeniería de Tecnologías Industriales)</li>
+                <li>Ampliación de Matemática Aplicada (Grado en Ingeniería de Robótica Software)</li>
+            </ul>
+        </details>
 
         <h2>Saint Louis University – Madrid Campus</h2>
 
-        <span class="term-header">Fall 2022</span>
-        <ul>
-            <li>Calculus I</li>
-            <li>Pre-Calculus</li>
-            <li>Principles of Mathematics</li>
-        </ul>
+        <details class="teaching-details">
+            <summary>[Show all previous terms at SLU (2021-2022)]</summary>
+            
+            <span class="term-header">Fall 2022</span>
+            <ul>
+                <li>Calculus I</li>
+                <li>Pre-Calculus</li>
+                <li>Principles of Mathematics</li>
+            </ul>
 
-        <span class="term-header">Spring 2022</span>
-        <ul>
-            <li>Calculus I</li>
-            <li>College Algebra (2 groups)</li>
-            <li>Advanced Mathematics for Engineers</li>
-        </ul>
+            <span class="term-header">Spring 2022</span>
+            <ul>
+                <li>Calculus I</li>
+                <li>College Algebra (2 groups)</li>
+                <li>Advanced Mathematics for Engineers</li>
+            </ul>
 
-        <span class="term-header">Fall 2021</span>
-        <ul>
-            <li>Calculus I</li>
-            <li>Advanced Mathematics for Engineers</li>
-        </ul>
+            <span class="term-header">Fall 2021</span>
+            <ul>
+                <li>Calculus I</li>
+                <li>Advanced Mathematics for Engineers</li>
+            </ul>
+        </details>
+
+	<h2>Seminars</h2>
+	
+        <details class="teaching-details">
+          <summary>[∃ n, P(n) ∈ Science (Saint Louis University - Madrid, 2022)]</summary>
+          <div style="margin-top:15px; font-size: 0.95rem;">
+            <p>Undergraduate Students Seminar. Reading Chapter 9 from <i>Using Algebraic Geometry</i> (Cox, Little, O'Shea).</p>
+            <ul>
+              <li><b>Day 1 (November 2, 2022):</b> <a href="SeminarSLUFall2022/StudentsSeminarioSLU2022Part1Fields.pdf" target="_blank">Slides</a></li>
+              <li><b>Day 2 (November 4, 2022):</b> Reading Section 9.1.</li>
+              <li><b>Day 3 (November 16, 2022):</b> Reading Section 9.2 (until Example 1).</li>
+              <li><b>Day 4 (November 30, 2022):</b> <a href="SeminarSLUFall2022/Seminar3SLU2022.m2" target="_blank">Macaulay2 code</a>. Introducing the Hamming distance and explaining Proposition 2.1.</li>
+              <li><b>Day 5 (December 7, 2022):</b> Topics: polynomials, ideals, algebraic varieties, Groebner bases, toric varieties, binomial ideals, etc.</li>
+            </ul>
+          </div>
+        </details>
     </section>
 </div>
 
